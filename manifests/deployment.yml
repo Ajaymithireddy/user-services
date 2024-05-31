@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ajaymithireddyuserservices 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ajaymithireddyuserservices
+  template:
+    metadata:
+      labels:
+        app: ajaymithireddyuserservices 
+    spec:
+      containers:
+        - name: ajaymithireddyuserservices 
+          image: myregistryp2.azurecr.io/ajaymithireddyuserservices
+          ports:
+          - containerPort: 8082
